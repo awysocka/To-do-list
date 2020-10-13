@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="todo-container">
-        <h1 class="title">To do list</h1>
         <header class="header">
-            <h2 class="list-name">My tasks</h2>
+            <h2 class="todo-title">My to do list</h2>
+            <form>
+                <input class="new-task" type="text">
+                <button class="add-task-button" type="submit"><i class="fas fa-plus"></i></button>
+            </form>
         </header>
-        <div class="content">
-            <input class="new-task" type="text">
-            <button class="add-task-button" type="submit"><i class="fas fa-plus"></i></button>
-            <ul class="tasks-list"></ul>
+        <div class="todo-content">
+            <ul class="tasks-list">
+                <!-- <li class="tasks-list-item">
+                    <button class="complete"><i class="far fa-circle"></i></button>
+                    <p class="task-text">Make coffee</p>
+                    <button class="delete"><i class="fas fa-trash"></i></button>
+                </li>
+                <li class="tasks-list-item">
+                    <button class="complete"><i class="far fa-circle"></i></button>
+                    <p class="task-text">Make coffee</p>
+                    <button class="delete"><i class="fas fa-trash"></i></button>
+                </li> -->
+            </ul>
         </div>
     </div>
 

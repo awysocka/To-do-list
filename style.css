@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color:  #730029;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background-color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: #fff;
+}
+
+.todo-container {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    width: 30%;
+    min-width: 300px;
+    background-color: #fff;
+    box-shadow: 2px 7px 12px 3px rgba(0,0,0,0.35);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #004D40;
+    padding: 4rem 2rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.todo-title {
+    margin-bottom: 2rem;
+    font-size: 2.6rem;
+    font-family: 'Courgette', cursive;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.new-task {
+    padding: 1rem;
+    flex: 1;  
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.new-task:focus {
+    outline: 1px solid #730029;
+}
+
+.add-task-button {
+    padding: 1rem;
+    background-color: #fff;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.add-task-button:hover {
+    color: #004D40;
+}
+
+.todo-content {
+    padding: 3rem 2rem;
+    color: #000;
+    font-size: 1.6rem;
+}
+
+.tasks-list .tasks-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.tasks-list .tasks-list-item:not(:first-child) {
+    border-top: 1px solid #E0F2F1;
+    padding-top: 1rem;
+}
+
+.task-text {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.delete:hover {
+    color: #730029;
+}
+
+.complete:hover {
+    color: #004D40;
+}
+
+
+
+
+
+
+
