@@ -63,6 +63,13 @@ button:focus {
     font-family: 'Courgette', cursive;
 }
 
+.todo-label {
+    font-size: 1.2rem ;
+    opacity: .7;
+    align-self: flex-start;
+    margin-bottom: .4rem;
+}
+
 form {
     width: 100%;
     display: flex;
@@ -93,13 +100,15 @@ form {
     color: #004D40;
 }
 
-.todo-content {
+.tasks-list {
     padding: 3rem 2rem;
     color: #000;
-    font-size: 1.6rem;
+    
 }
 
 .tasks-list .tasks-list-item {
+    margin: 0 auto;
+    font-size: 1.6rem;
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;

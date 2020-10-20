@@ -12,25 +12,24 @@
     <div class="todo-container">
         <header class="header">
             <h2 class="todo-title">My to do list</h2>
+            <label class="todo-label" for="task">new task name</label>
             <form>
-                <input class="new-task" type="text">
+                <input class="new-task" id="task" type="text" name="task" minlength="1">
                 <button class="add-task-button" type="submit"><i class="fas fa-plus"></i></button>
             </form>
         </header>
-        <div class="todo-content">
-            <ul class="tasks-list">
-                <!-- <li class="tasks-list-item">
-                    <button class="complete"><i class="far fa-circle"></i></button>
-                    <p class="task-text">Make coffee</p>
-                    <button class="delete"><i class="fas fa-trash"></i></button>
-                </li>
-                <li class="tasks-list-item">
-                    <button class="complete"><i class="far fa-circle"></i></button>
-                    <p class="task-text">Make coffee</p>
-                    <button class="delete"><i class="fas fa-trash"></i></button>
-                </li> -->
-            </ul>
-        </div>
+        <ul class="tasks-list">
+            <li class="tasks-list-item">
+                <button class="complete"><i class="far fa-circle"></i></button>
+                <p class="task-text">Make coffee</p>
+                <button class="delete"><i class="fas fa-trash"></i></button>
+            </li>
+            <li class="tasks-list-item">
+                <button class="complete"><i class="far fa-circle"></i></button>
+                <p class="task-text">Make coffee</p>
+                <button class="delete"><i class="fas fa-trash"></i></button>
+            </li>
+        </ul>
     </div>
 
     <script src="script.js"></script>   
