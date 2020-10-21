@@ -19,9 +19,10 @@ function addTask() {
     const clone = template.content.cloneNode(true);
     const taskNameElement = clone.querySelector('.task-name');
     const taskCompleteButton = clone.querySelector('.complete-button');
+    const taskDeleteButton = clone.querySelector('.delete-button');
     
     taskCompleteButton.addEventListener('click', completeTask);
-
+    taskDeleteButton.addEventListener('click', deleteTask);
     taskNameElement.append(taskNameInput.value);
     tasksList.appendChild(clone);
     return true;
@@ -34,6 +35,12 @@ function completeTask(e) {
 
     taskCompleteIcon.classList.toggle('fas');
     taskElement.classList.toggle('task-list-item-completed');
+}
+
+function deleteTask(e) {
+    const taskDeleteButton = e.target;
+    
+    taskDeleteButton.parentElement.remove();
 }
 
 function clearTaskNameInput() {
