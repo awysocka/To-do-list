@@ -52,7 +52,7 @@ button:focus {
     flex-direction: column;
     align-items: center;
     background-color: #004D40;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 2rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -70,7 +70,7 @@ button:focus {
     margin-bottom: .4rem;
 }
 
-form {
+.form {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -79,14 +79,20 @@ form {
 .new-task {
     padding: 1rem;
     flex: 1;  
-    border: none;
+    border: 1px solid #fff;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
 .new-task:focus {
-    outline: 1px solid #730029;
+    outline: 1px solid #004D40;
 }
+
+.new-task-error {
+    border: 1px solid red;
+}
+
+
 
 .add-task-button {
     padding: 1rem;
@@ -98,6 +104,18 @@ form {
 
 .add-task-button:hover {
     color: #004D40;
+}
+
+.error-message {
+    align-self: flex-start;
+    color: red;
+    font-size: 1.2rem;
+    margin-top: .4rem;
+    opacity: 0;
+}
+
+.error-message-active {
+    opacity: 1;
 }
 
 .tasks-list {
@@ -124,7 +142,7 @@ form {
     margin: 0 1rem;
 }
 
-.delete:hover {
+.delete-task:hover {
     color: #730029;
 }
 
