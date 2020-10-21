@@ -32,7 +32,7 @@ button:hover {
 }
 
 button:focus {
-    outline: #fff;
+    outline: 2px solid #730029;
 }
 
 .todo-container {
@@ -85,14 +85,13 @@ button:focus {
 }
 
 .new-task:focus {
-    outline: 1px solid #004D40;
+    outline: 2px solid #730029;
+    z-index: 1;
 }
 
 .new-task-error {
     border: 1px solid red;
 }
-
-
 
 .add-task-button {
     padding: 1rem;

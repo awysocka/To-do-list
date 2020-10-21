@@ -59,11 +59,18 @@ function validateTaskNameInput() {
     }
 }
 
-addTaskButton.addEventListener('click', e => {
-    e.preventDefault();
+function handleAddTask() {
     const taskAdded = addTask();
     if (taskAdded) {
         clearTaskNameInput();
+    }
+}
+
+addTaskButton.addEventListener('click', handleAddTask);
+
+taskNameInput.addEventListener('keypress', (e) => {
+    if (e.keyCode == 13) {
+        handleAddTask();
     }
 });
 
