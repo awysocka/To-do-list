@@ -1,7 +1,7 @@
 const addTaskButton = document.querySelector('#add-task-button');
-const taskNameInput = document.querySelector('#task');
-const tasksList = document.querySelector('.tasks-list');
-const showErrorMessage = document.querySelector('.error-message');
+const taskNameInput = document.querySelector('#task-name-input');
+const tasksList = document.querySelector('#tasks-list');
+const errorMessage = document.querySelector('#error-message');
 
 function addTask() {
     // checks if the browser supports template element
@@ -17,11 +17,23 @@ function addTask() {
 
     const template = document.querySelector('#list-element');
     const clone = template.content.cloneNode(true);
-    const taskText = clone.querySelector('.task-text');
+    const taskNameElement = clone.querySelector('.task-name');
+    const taskCompleteButton = clone.querySelector('.complete-button');
+    
+    taskCompleteButton.addEventListener('click', completeTask);
 
-    taskText.append(taskNameInput.value);
+    taskNameElement.append(taskNameInput.value);
     tasksList.appendChild(clone);
     return true;
+}
+
+function completeTask(e) {
+    const taskCompleteButton = e.target;
+    const taskCompleteIcon = taskCompleteButton.querySelector('i');
+    const taskElement = taskCompleteButton.parentElement;
+
+    taskCompleteIcon.classList.toggle('fas');
+    taskElement.classList.toggle('task-list-item-completed');
 }
 
 function clearTaskNameInput() {
@@ -30,11 +42,11 @@ function clearTaskNameInput() {
 
 function validateTaskNameInput() {
     if (taskNameInput.value == null || taskNameInput.value === '') {
-        showErrorMessage.classList.add('error-message-active');
+        errorMessage.classList.add('error-message-visible');
         taskNameInput.classList.add('new-task-error');
         return false;
     } else {
-        showErrorMessage.classList.remove('error-message-active');
+        errorMessage.classList.remove('error-message-visible');
         taskNameInput.classList.remove('new-task-error');
         return true;
     }
@@ -49,5 +61,3 @@ addTaskButton.addEventListener('click', e => {
 });
 
 taskNameInput.addEventListener('input', validateTaskNameInput);
-
-

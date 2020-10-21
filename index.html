@@ -14,24 +14,20 @@
             <h2 class="todo-title">My to do list</h2>
             <label class="todo-label" for="task">new task name</label>
             <div class="form">
-                <input class="new-task" id="task" type="text" name="task">
+                <input class="new-task" id="task-name-input" type="text" name="task">
                 <button class="add-task-button" id="add-task-button" type="submit"><i class="fas fa-plus"></i></button>
             </div>
-            <div class="error-message">Please fill out this field.</div>
+            <div class="error-message" id="error-message">Please fill out this field.</div>
         </header>
-        <ul class="tasks-list">
-            <!-- <li class="tasks-list-item">
-                <button class="complete"><i class="far fa-circle"></i></button>
-                <p class="task-text">Make coffee</p>
-                <button class="delete"><i class="fas fa-trash"></i></button>
-            </li> -->
+        <ul class="tasks-list" id="tasks-list">
+            <!-- list-element -->
         </ul>
     </div>
     <template id="list-element">
         <li class="tasks-list-item">
-            <button class="complete"><i class="far fa-circle"></i></button>
-            <p class="task-text"></p>
-            <button class="delete-task"><i class="fas fa-trash"></i></button>
+            <button class="complete-button"><i class="far fa-circle"></i></button>
+            <p class="task-name"></p>
+            <button class="delete-button"><i class="fas fa-trash"></i></button>
         </li>
     </template>
 

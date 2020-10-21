@@ -114,7 +114,7 @@ button:focus {
     opacity: 0;
 }
 
-.error-message-active {
+.error-message-visible {
     opacity: 1;
 }
 
@@ -137,19 +137,32 @@ button:focus {
     padding-top: 1rem;
 }
 
-.task-text {
+.task-name {
     flex: 1;
     margin: 0 1rem;
 }
 
-.delete-task:hover {
+.task-list-item-completed .task-name {
+    text-decoration: line-through;
+    opacity: .6;
+}
+
+.delete-button:hover {
     color: #730029;
 }
 
-.complete:hover {
+.complete-button:hover {
     color: #004D40;
 }
 
+.complete-button .fas {
+    color: #004D40;
+    opacity: .6;
+}
+
+.fa-circle, .fa-trash {
+    pointer-events: none;
+}
 
 
 
