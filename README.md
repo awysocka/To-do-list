@@ -1,6 +1,8 @@
 # To-do-list
 My first application made to develop my js skills. 
 
+![website-mockup](https://github.com/awysocka/to-do-list/blob/master/readme-img/to-do-list.jpg)
+
 ## technologies
 * html 5
 * css 3
